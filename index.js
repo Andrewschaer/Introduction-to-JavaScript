@@ -17,8 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
 
+if(votingAge => 18){
+  console.log(true)
+}
 
+votingAge = 25
 
 /*
 Task 1b - Values
@@ -31,9 +36,13 @@ Do the following:
    HINT: no function required
 */
 
+let num1 = 5;
+let num2 = 2;
 
-
-
+if(num2 < 4){
+  num1 = 7;
+}
+console.log(num1)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,9 +54,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+let oldyear = '1999';
+Number(oldyear);
+console.log(oldyear)
 
 /*
 Task 1d - Multiply
@@ -58,10 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(4,7))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,11 +83,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
-
-
+console.log(dogYears(3))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -116,7 +124,7 @@ function hungryDog(weight, age){
       return weight * 0.03;
     }else if(age >= 1 && weight >= 15){
       return weight * 0.02;
-    } else if(age < 1 && age >= 0.583){
+    }else if(age < 1 && age >= 0.583){
       return weight * 0.04;
     }else if(age < 0.583 && age >= 0.333){
       return weight * 0.05;
@@ -151,11 +159,25 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.random();
+  if (computer < 1 && computer > 0.66){
+    computer = 'rock';
+  }else if (computer <= 0.66 && computer > 0.33){
+    computer = 'paper';
+  }else if (computer <= 0.33){
+    computer = 'scissors';
+  }
 function game(user, computer){
-    /*add your code here*/
-}
-  
+    if ((user === 'rock' && computer === 'scissors')|| (user === 'scissors' && computer === 'paper')||(user === 'paper' && computer === 'rock')){
+      return 'you win!';
+    }else if ((user === 'rock' && computer === 'paper')||(user === 'scissors' && computer === 'rock')||(user === 'paper' && computer === 'scissors')){
+      return 'you lose!';
+    }else if (user === computer){
+      return "it's a tie";
+    }
+  }
+
+console.log(game('rock', computer));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
