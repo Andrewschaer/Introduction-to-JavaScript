@@ -224,13 +224,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-// function annoyingSong(bottles){
-//     for(let i = bottles; i >= 0; i--){
-//       return '${ i } bottles of soda on the wall, ${ i } bottles of soda, take one down pass it around ${ i - 1 } bottles of soda on the wall'
-//     }
-//   }
+function annoyingSong(bottles){
+    for(let i = bottles; i >= 0; i--){
+      return '${ i } bottles of soda on the wall, ${ i } bottles of soda, take one down pass it around ${ i - 1 } bottles of soda on the wall'
+    }
+  }
 
-// console.log(annoyingSong(4))
+console.log(annoyingSong(4))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -248,20 +248,21 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(score){
-  if(score <= 100 && score >= 90){
+function grade(percentScore){
+  if(percentScore <= 100 && percentScore >= 90){
     return 'you got an A';
-  }else if(score < 90 && score >= 80){
-    return 'you got an B';
-  }else if(score < 80 && score >= 70){
-    return 'you got an C';
-  }else if(score < 70 && score >= 60){
-    return 'you got an D';
-  }else if(score < 60){
-      return 'you got an F';
+  }else if(percentScore < 90 && percentScore >= 80){
+    return 'you got a B';
+  }else if(percentScore < 80 && percentScore >= 70){
+    return 'you got a C';
+  }else if(percentScore < 70 && percentScore >= 60){
+    return 'you got a D';
+  }else if(percentScore < 60){
+    return 'you got an F';
+  }
 }
 
-console.log(grade(76))
+console.log(grade(50))
   
   
 
